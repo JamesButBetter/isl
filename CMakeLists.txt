@@ -67,7 +67,7 @@ cmake_dependent_option(ISLE_USE_DX5_LIBS "Build with internal DirectX 5 SDK Libr
 option(ISLE_BUILD_LEGO1 "Build LEGO1.DLL library" ON)
 option(ISLE_BUILD_BETA10 "Build BETA10.DLL library" OFF)
 option(ISLE_INCLUDE_ENTROPY "Build with entropy.h" OFF)
-option(ISLE_ENTROPY_FILENAME "Entropy header filename" "entropy.h")
+set(ISLE_ENTROPY_FILENAME "entropy.h" CACHE STRING "Entropy header filename")
 
 if(NOT (ISLE_BUILD_LEGO1 OR ISLE_BUILD_BETA10))
   message(FATAL_ERROR "ISLE_BUILD_LEGO1 AND ISLE_BUILD_BETA10 cannot be both disabled")
